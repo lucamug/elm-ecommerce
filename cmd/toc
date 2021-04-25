@@ -1,0 +1,7 @@
+#!/bin/bash
+set -eu
+
+printf "Usage examples:\n\ncmd/toc src/Main.elm\ncmd/toc src/Dashboard.elm\n\n"
+grep '^\-\-|' $1 | sed 's/--/-- /' | pbcopy
+pbpaste
+printf "\nThe Table of Content has been copied to the clipboard. You can paste into $1 now.\n\n"

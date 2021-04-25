@@ -1,0 +1,4 @@
+#!/bin/bash
+set -eu
+
+npx elm-go src/Dashboard.elm --dir=docs --port=8001 --start-page=dashboard.html --pushstate --hot -- --output=docs/dashboard.js --debug

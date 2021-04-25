@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" size="16x16, 32x32, 48x48, 64x64, 128x128, 256x256" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- Primary Meta Tags -->
+    <title>elm eCommerce</title>
+    <meta name="title" content="elm eCommerce">
+    <meta name="description" content="This is an eCommerce demo application built with Elm.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elm-ecommerce.surge.sh/">
+    <meta property="og:title" content="elm eCommerce">
+    <meta property="og:description" content="This is an eCommerce demo application built with Elm.">
+    <meta property="og:image" content="https://elm-ecommerce.surge.sh/elm-ecommerce-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elm-ecommerce.surge.sh/">
+    <meta property="twitter:title" content="elm eCommerce">
+    <meta property="twitter:description" content="This is an eCommerce demo application built with Elm.">
+    <meta property="twitter:image" content="https://elm-ecommerce.surge.sh/elm-ecommerce-logo.png">
+
+</head>
+
+<body>
+    <div id="elm"></div>
+    <script src="/elm.js"></script>
+    <script>
+        var app = Elm.Main.init({
+            node: document.getElementById("elm"),
+            flags: {
+                localStorage: String(localStorage.getItem("elm")),
+                locationHref: location.href.startsWith("blob") ? "https://example.com/" : location.href
+            }
+
+        });
+        app.ports.pushUrl.subscribe(function(url) {
+            if (location.href.startsWith("blob")) {
+                app.ports.onUrlChange.send("https://example.com" + url);
+            } else {
+                history.pushState({}, "", url);
+                app.ports.onUrlChange.send(location.href);
+            }
+        });
+        app.ports.pushLocalStorage.subscribe(function(state) {
+            localStorage.setItem("elm", state);
+        });
+        window.onpopstate = function() {
+            app.ports.onUrlChange.send(location.href);
+        };
+        window.onstorage = function(event) {
+            app.ports.onLocalStorageChange.send(event.newValue);
+        };
+    </script>
+</body>
+
+</html>

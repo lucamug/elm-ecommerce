@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu
+
+npx scc src docs/index.html --by-file | tee docs/loc.txt
+printf "Lines of code available at http://localhost:8000/loc.txt or docs/loc.txt\n\n"

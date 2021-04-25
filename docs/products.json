@@ -1,0 +1,137 @@
+[
+    {
+        "bg": 2,
+        "tag": "5% OFF",
+        "price": 1220,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Dragon Fruit (Pitaya)",
+        "id": "fruit_dragonfruit"
+    },
+    {
+        "bg": 0,
+        "tag": "NEW",
+        "price": 890,
+        "stars": 3,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Drink, with Lemons, Kiwi Fruits, Oranges, Blueberry and Raspberry",
+        "id": "drink_fruit_flavor_detox_water"
+    },
+    {
+        "bg": 0,
+        "tag": "10% OFF",
+        "price": 220,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Can, with Pineapple, Peach, Cherries and Mandarin",
+        "id": "kandume6_mix"
+    },
+    {
+        "bg": 2,
+        "tag": "NEW",
+        "price": 2450,
+        "stars": 5,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Tart with Kiwi Fruits, Peach, Banana, Strawberry and Blackberry",
+        "id": "sweets_fruit_tarte"
+    },
+    {
+        "bg": 1,
+        "tag": "NEW",
+        "price": 180,
+        "stars": 2,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Pineapple Can",
+        "id": "kandume1_pineapple"
+    },
+    {
+        "bg": 1,
+        "tag": "15% OFF",
+        "price": 1850,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Sweets Daifuku Strawberry",
+        "id": "sweets_daifuku_ichigo"
+    },
+    {
+        "bg": 2,
+        "tag": "15% OFF",
+        "price": 1990,
+        "stars": 5,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Sweets Fruit Mitsumame with Peach, Cherries, Banana and Mandarin",
+        "id": "sweets_fruit_mitsumame"
+    },
+    {
+        "bg": 3,
+        "tag": "",
+        "price": 740,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Energy Lemon Battery",
+        "id": "energy_lemon_denchi_battery"
+    },
+    {
+        "bg": 0,
+        "tag": "",
+        "price": 1240,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Jelly with Mandarin, Kiwi Fruits and Peach",
+        "id": "fruit_jelly"
+    },
+    {
+        "bg": 3,
+        "tag": "",
+        "price": 380,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Ice Strawberry",
+        "id": "fruitice_strawberry"
+    },
+    {
+        "bg": 3,
+        "tag": "",
+        "price": 380,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Ice Orange",
+        "id": "fruitice_orange"
+    },
+    {
+        "bg": 3,
+        "tag": "",
+        "price": 380,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Ice Kiwi Fruits",
+        "id": "fruitice_kiwi"
+    },
+    {
+        "bg": 1,
+        "tag": "",
+        "price": 9900,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Basket",
+        "id": "fruits_basket"
+    },
+    {
+        "bg": 1,
+        "tag": "",
+        "price": 850000,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Fruit Sandwich with Strawberry, Kiwi Fruits and Banana",
+        "id": "food_fruit_sandwich"
+    },
+    {
+        "bg": 2,
+        "tag": "",
+        "price": 3400,
+        "stars": 4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc in mi mollis interdum ac et velit. In id elementum turpis. Fusce ornare tortor at magna viverra iaculis. Integer eget purus gravida, ultricies quam nec, dictum dolor. Morbi sit amet leo ac leo laoreet lobortis ornare ac erat. Phasellus gravida a nibh in tempus. Aenean dictum augue id urna egestas, eget tristique ipsum lobortis. Nunc tempor dictum quam ut pharetra. Sed tincidunt nisi mi, id porta orci facilisis eget. Sed et ultrices tellus. Morbi ac diam condimentum, accumsan lectus sed, scelerisque massa. In maximus tortor nec pharetra posuere. Pellentesque eget sapien urna. Vestibulum pulvinar nisi ultrices enim volutpat, a placerat tortor laoreet.",
+        "name": "Watermelon",
+        "id": "fruit_suika_red"
+    }
+]

@@ -1,0 +1,4 @@
+#!/bin/bash
+set -eu
+
+npx elm-go src/Main.elm --dir=docs --start-page=index.html --pushstate --hot -- --output=docs/elm.js --debug

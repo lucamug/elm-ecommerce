@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu
+
+npx surge build/normal    elm-ecommerce.surge.sh
+npx surge build/dashboard elm-ecommerce-dashboard.surge.sh
