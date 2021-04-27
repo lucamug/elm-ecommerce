@@ -27,3 +27,6 @@ cp docs/robots.txt build/dashboard/
 
 cp docs/elm-ecommerce-logo.png build/normal/
 cp docs/elm-ecommerce-logo.png build/dashboard/
+
+cp docs/_redirects build/normal/
+cp docs/_redirects build/dashboard/

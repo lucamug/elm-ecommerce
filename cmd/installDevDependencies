@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu
+
+npm i -g elm@0.19.1-5
+npm i -g elm-go@5.0.12

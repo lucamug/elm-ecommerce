@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu
+
+npm i -g elm@0.19.1-5
+npm i -g terser@5.7.0

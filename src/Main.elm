@@ -274,10 +274,12 @@ configuration =
     { nameWebsite = "elm eCommerce"
     , mediaLocation = "https://training-assets.surge.sh/media/"
     , qrCodeContent =
-        [ ( "elm eCommerce", "https://elm-ecommerce.surge.sh " )
-        , ( "elm eCommerce + dashboard", "https://elm-ecommerce-dashboard.surge.sh" )
-        , ( "elm eCommerce in Ellie", "https://ellie-app.com/cZbNgHS6hK8a1" )
+        [ ( "elm eCommerce", "https://elm-ecommerce.guupa.com " )
+        , ( "elm eCommerce + dashboard", "https://elm-ecommerce-dashboard.guupa.com" )
+        , ( "elm eCommerce in Ellie", "https://ellie-app.com/d2dKW5XHVcCa1" )
         , ( "source code", "https://github.com/lucamug/elm-ecommerce" )
+        , ( "illustrations (いらすとや)", "https://www.irasutoya.com/" )
+        , ( "icons", "https://feathericons.com/" )
         ]
     , gridMinimum = 165
     , gridMaximum = 340
@@ -2638,12 +2640,28 @@ inFrontInfoModal =
                     ]
                     [ elementWithContext <| \c -> atomLogo [ centerX ] { size = 28, color = c.palette.onSecondary }
                     , paragraph
-                        []
-                        [ text "This is an eCommerce demo application built with "
-                        , newTabLink [ Font.underline ] { url = "https://elm-lang.org/", label = text "Elm" }
-                        , text "."
+                        [ Font.center ]
+                        [ text "🍇🍉🍏🍊🍋🍌🍍🍎🍐🍑🍒🍈🍓🥝"
                         ]
-                    , paragraph []
+                    , paragraph [ Font.center ]
+                        [ text "A simple eCommerce demo application in 2,500 lines of "
+                        , newTabLink [ Font.underline ] { url = "https://elm-lang.org/", label = text "Elm" }
+                        , text " code, all shrank into 40KB of JavaScript, including styling and icons."
+                        ]
+                    , paragraph [ Font.size 20 ] [ text "Characteristics" ]
+                    , column [ spacing 4 ]
+                        [ paragraph [] [ text "• Responsive" ]
+                        , paragraph [] [ text "• Cart and Favorites management" ]
+                        , paragraph [] [ text "• Persistent (local storage)" ]
+                        , paragraph [] [ text "• Synced across tabs" ]
+                        , paragraph [] [ text "• Light / Dark mode" ]
+                        , paragraph [] [ text "• Bilingual" ]
+                        , paragraph [] [ text "• Searchable/Sortable results" ]
+                        , paragraph [] [ text "• Dashboard (+1,100 lines of Elm)" ]
+                        , paragraph [] [ text "• Atomic design" ]
+                        , paragraph [] [ text "• Fault tolerant" ]
+                        ]
+                    , paragraph [ Font.size 20 ]
                         [ text "It is made of"
                         ]
                     , html <|
@@ -2653,18 +2671,6 @@ inFrontInfoModal =
    25 lines of JavaScript
    15 lines of HTML"""
                             ]
-                    , paragraph [ Font.size 20 ] [ text "Characteristics" ]
-                    , column [ spacing 4 ]
-                        [ paragraph [] [ text "• Responsive" ]
-                        , paragraph [] [ text "• Cart and Favorites management" ]
-                        , paragraph [] [ text "• Persistent (local storage)" ]
-                        , paragraph [] [ text "• Light / Dark mode" ]
-                        , paragraph [] [ text "• Bilingual" ]
-                        , paragraph [] [ text "• Searchable/Sortable results" ]
-                        , paragraph [] [ text "• Dashboard (+1,100 lines of Elm)" ]
-                        , paragraph [] [ text "• Atomic design" ]
-                        , paragraph [] [ text "• Fault tolerant" ]
-                        ]
                     , paragraph [ Font.size 20 ] [ text "Links" ]
                     , elementWithContext <|
                         \c ->
