@@ -31,8 +31,8 @@ import Url.Parser.Query
 -- |     LocalStorage
 -- |     Language
 -- |     ProductId
--- |     Order
--- |     OrderDirection
+-- |     Sort
+-- |     SortDirection
 -- |     Page
 -- |     Mode
 -- |     HttpRequest
@@ -63,7 +63,7 @@ import Url.Parser.Query
 -- |     atomIcon
 -- | MOLECULES
 -- |     molMenuMain
--- |     molMenuOrderBy
+-- |     molMenuSortBy
 -- |     molAddToFavorites
 -- |     molAddToCart
 -- |     molAddToCartLarge
@@ -120,8 +120,8 @@ type alias Model =
 
     -- NOT saved in Local Storage
     , temp : List ProductId
-    , order : Order
-    , orderDirection : OrderDirection
+    , sort : Sort
+    , sortDirection : SortDirection
     , page : Page
     , httpRequest : HttpRequest
     , warnings : List String
@@ -172,20 +172,20 @@ type ProductId
 
 
 
---|     Order
+--|     Sort
 
 
-type Order
+type Sort
     = Price
     | Stars
     | Alpha
 
 
 
---|     OrderDirection
+--|     SortDirection
 
 
-type OrderDirection
+type SortDirection
     = Ascending
     | Descending
 
@@ -309,8 +309,8 @@ init flags =
             , mode = Light
             , language = EN_US
             , temp = []
-            , order = Stars
-            , orderDirection = Descending
+            , sort = Stars
+            , sortDirection = Descending
             , page = Top Nothing
             , httpRequest = Fetching
             , warnings = []
@@ -488,7 +488,7 @@ type Msg
     | ChangeUrl String
     | ChangeLocalStorage String
     | ChangePage Page
-    | ChangeOrder Order
+    | ChangeSort Sort
     | ChangeCart Product Int
     | ChangeLanguage Language
     | ChangePwd String
@@ -587,15 +587,15 @@ updateMain msg model =
             in
             ( model, Cmd.batch [ resetViewport, pushUrl (pageToString newPage) ] )
 
-        ChangeOrder order ->
+        ChangeSort sort ->
             ( { model
-                | order = order
-                , orderDirection =
-                    if order == model.order then
-                        toggleDirection model.orderDirection
+                | sort = sort
+                , sortDirection =
+                    if sort == model.sort then
+                        toggleDirection model.sortDirection
 
                     else
-                        model.orderDirection
+                        model.sortDirection
               }
             , Cmd.none
             )
@@ -628,7 +628,7 @@ updateMain msg model =
             ( { model | pwd = pwd_ }, Cmd.none )
 
         ToggleDirection ->
-            ( { model | orderDirection = toggleDirection model.orderDirection }, Cmd.none )
+            ( { model | sortDirection = toggleDirection model.sortDirection }, Cmd.none )
 
         ToggleSearch ->
             ( { model
@@ -789,9 +789,9 @@ emitMessageWithDelay millis msg =
     Task.perform (always msg) (Process.sleep millis)
 
 
-toggleDirection : OrderDirection -> OrderDirection
-toggleDirection orderDirection =
-    case orderDirection of
+toggleDirection : SortDirection -> SortDirection
+toggleDirection sortDirection =
+    case sortDirection of
         Ascending ->
             Descending
 
@@ -958,10 +958,10 @@ filterSearch maybeSearchQuery products =
             products
 
 
-sortBy : Order -> OrderDirection -> List Product -> List Product
-sortBy order orderDirection products =
+sortBy : Sort -> SortDirection -> List Product -> List Product
+sortBy sort sortDirection products =
     products
-        |> (case order of
+        |> (case sort of
                 Price ->
                     List.sortBy .price
 
@@ -971,7 +971,7 @@ sortBy order orderDirection products =
                 Alpha ->
                     List.sortBy .name
            )
-        |> (case orderDirection of
+        |> (case sortDirection of
                 Ascending ->
                     List.reverse
 
@@ -1389,54 +1389,54 @@ molMenuMain attrs model =
 
 
 
---|     molMenuOrderBy
+--|     molMenuSortBy
 
 
-molMenuOrderBy : List (Attribute Msg) -> Order -> OrderDirection -> Element Msg
-molMenuOrderBy attrs2 order orderDirection =
+molMenuSortBy : List (Attribute Msg) -> Sort -> SortDirection -> Element Msg
+molMenuSortBy attrs2 sort sortDirection =
     row
-        ([ tag "molMenuOrderBy", spacing 20, alpha 0.7 ] ++ attrs2)
-        [ elementWithContext <| \c -> text <| trOrderBy c.language
-        , Input.button [ title "Order Alphabetically" ]
+        ([ tag "molMenuSortBy", spacing 20, alpha 0.7 ] ++ attrs2)
+        [ elementWithContext <| \c -> text <| trSortBy c.language
+        , Input.button [ title "Sort Alphabetically" ]
             { label =
                 buttonEffect []
-                    { active = order == Alpha
+                    { active = sort == Alpha
                     , height = 24
                     , width = 24
                     , icon1 = FeatherIcons.bold
                     , icon2 = FeatherIcons.bold
                     , color = .onBackground
                     }
-            , onPress = Just <| ChangeOrder Alpha
+            , onPress = Just <| ChangeSort Alpha
             }
-        , Input.button [ title "Order by Price" ]
+        , Input.button [ title "Sort by Price" ]
             { label =
                 buttonEffect []
-                    { active = order == Price
+                    { active = sort == Price
                     , height = 24
                     , width = 24
                     , icon1 = FeatherIcons.tag
                     , icon2 = FeatherIcons.tag
                     , color = .onBackground
                     }
-            , onPress = Just <| ChangeOrder Price
+            , onPress = Just <| ChangeSort Price
             }
-        , Input.button [ title "Order by Rating" ]
+        , Input.button [ title "Sort by Rating" ]
             { label =
                 buttonEffect []
-                    { active = order == Stars
+                    { active = sort == Stars
                     , height = 24
                     , width = 24
                     , icon1 = FeatherIcons.star
                     , icon2 = FeatherIcons.star
                     , color = .onBackground
                     }
-            , onPress = Just <| ChangeOrder Stars
+            , onPress = Just <| ChangeSort Stars
             }
-        , Input.button [ title "Ordering orderDirection" ]
+        , Input.button [ title "Sorting sortDirection" ]
             { label =
                 buttonEffect []
-                    { active = orderDirection == Descending
+                    { active = sortDirection == Descending
                     , height = 24
                     , width = 24
                     , icon1 = FeatherIcons.arrowUp
@@ -2179,7 +2179,7 @@ orgProductsGrid model maxProduct =
     in
     column
         (tag "orgProductsGrid" :: attrsContent)
-        [ molMenuOrderBy [ alignRight, paddingXY 0 10 ] model.order model.orderDirection
+        [ molMenuSortBy [ alignRight, paddingXY 0 10 ] model.sort model.sortDirection
         , if products == [] then
             molProductNotFound model.page
 
@@ -2188,7 +2188,7 @@ orgProductsGrid model maxProduct =
                 [ spacing 10 ]
             <|
                 (products
-                    |> sortBy model.order model.orderDirection
+                    |> sortBy model.sort model.sortDirection
                     |> List.map
                         (molProductForGrid [] model.cart model.favorites (pageToSearchQuery model.page))
                 )
@@ -2249,7 +2249,7 @@ orgProductsRows model =
     in
     column
         (tag "orgProductsRows" :: attrsContent)
-        [ molMenuOrderBy [ alignRight, paddingXY 0 10 ] model.order model.orderDirection
+        [ molMenuSortBy [ alignRight, paddingXY 0 10 ] model.sort model.sortDirection
         , column [ spacing 10, width fill ] content
         , total
         ]
@@ -2800,7 +2800,7 @@ listIdsToListProducts model listProductIds searchQuery =
                 |> List.map (productIdToProduct model.httpRequest)
                 |> removeNothings
                 |> filterSearch searchQuery
-                |> sortBy model.order model.orderDirection
+                |> sortBy model.sort model.sortDirection
 
         _ ->
             List.repeat
@@ -3116,7 +3116,7 @@ attrWithContext =
     withAttribute identity
 
 
-decorationWithContext : (msg -> Decoration msg) -> Decoration msg
+decorationWithContext : (msg -> Element.WithContext.Decoration msg) -> Element.WithContext.Decoration msg
 decorationWithContext =
     withDecoration identity
 
@@ -3312,11 +3312,11 @@ codecLanguage =
 -- became unused, it will not be included in the build, automatically.
 
 
-trOrderBy : Language -> String
-trOrderBy language =
+trSortBy : Language -> String
+trSortBy language =
     case language of
         EN_US ->
-            "Order by"
+            "Sort by"
 
         JA_JP ->
             "注文者"

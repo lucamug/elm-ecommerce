@@ -1218,7 +1218,7 @@ viewDesignSystem modelReal =
             ++ sectionA "molClose" (Main.molSecondaryButton [] FeatherIcons.x Main.DoNothing)
             ++ sectionA "molStars" (Main.molStars [] p1.stars)
             ++ sectionA "molMenuMain" (externalElement <| Main.molMenuMain [] modelFull)
-            ++ sectionA "molMenuOrderBy" (Main.molMenuOrderBy [] modelFull.order modelFull.orderDirection)
+            ++ sectionA "molMenuSortBy" (Main.molMenuSortBy [] modelFull.sort modelFull.sortDirection)
             ++ sectionA "molProductForStrip" (Main.molProductForStrip [] p1)
             ++ sectionA "molProductForGrid" (Main.molProductForGrid [] modelFull.cart modelFull.favorites (Main.pageToSearchQuery modelFull.page) p1)
             ++ sectionA "molEmptyList (Cart)" (Main.molEmptyList (Main.Cart Nothing))
